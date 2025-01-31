@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest:MediaManifest xmlns:manifest="http://www.movielabs.com/schema/manifest/v1.8/manifest" xmlns:md="http://www.movielabs.com/schema/md/v2.7/md" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.movielabs.com/schema/manifest/v1.8/manifest manifest-v1.8.1.xsd">
+<manifest:Compatibility>
+<manifest:SpecVersion>1.8</manifest:SpecVersion>
+<manifest:System></manifest:System>
+<manifest:Profile>MMC-1</manifest:Profile>
+</manifest:Compatibility>
+<manifest:Source>
+<manifest:ServiceProvider>
+<md:DisplayName>OUTtv</md:DisplayName>
+</manifest:ServiceProvider>
+<manifest:Licensor>
+<md:DisplayName>outtv.com</md:DisplayName>
+</manifest:Licensor>
+</manifest:Source>
+<manifest:Inventory>
+<manifest:Image ImageID="md:imageid:org:outtv:ExampleID:bannersquare:art.en">
+<md:Width>3000</md:Width>
+<md:Height>3000</md:Height>
+<md:Encoding>png</md:Encoding>
+<md:Language>en</md:Language>
+<manifest:ContainerReference>
+<manifest:ContainerLocation>./ExampleID-banner-3000x3000.png</manifest:ContainerLocation>
+</manifest:ContainerReference>
+</manifest:Image>
+<manifest:Image ImageID="md:imageid:org:outtv:ExampleID:banner:art.en">
+<md:Width>3840</md:Width>
+<md:Height>2160</md:Height>
+<md:Encoding>png</md:Encoding>
+<md:Language>en</md:Language>
+<manifest:ContainerReference>
+<manifest:ContainerLocation>./ExampleID-banner-3840x2160.png</manifest:ContainerLocation>
+</manifest:ContainerReference>
+</manifest:Image>
+<manifest:Image ImageID="md:imageid:org:outtv:ExampleID:photo:art.en">
+<md:Width>3840</md:Width>
+<md:Height>2160</md:Height>
+<md:Encoding>png</md:Encoding>
+<md:Language>en</md:Language>
+<manifest:ContainerReference>
+<manifest:ContainerLocation>./ExampleID-photo-3840x2160.png</manifest:ContainerLocation>
+</manifest:ContainerReference>
+</manifest:Image>
+<manifest:Image ImageID="md:imageid:org:outtv:ExampleID:photosd:art.en">
+<md:Width>4320</md:Width>
+<md:Height>3240</md:Height>
+<md:Encoding>png</md:Encoding>
+<md:Language>en</md:Language>
+<manifest:ContainerReference>
+<manifest:ContainerLocation>./ExampleID-photo-4320x3240.png</manifest:ContainerLocation>
+</manifest:ContainerReference>
+</manifest:Image>
+<manifest:Metadata ContentID="md:cid:org:outtv:ExampleID">
+<manifest:ContainerReference type="common">
+<manifest:ContainerLocation>./ExampleID_mec_youtube.xml</manifest:ContainerLocation>
+</manifest:ContainerReference>
+</manifest:Metadata>
+</manifest:Inventory>
+<manifest:Experiences>
+<manifest:Experience ExperienceID="md:experienceid:org:outtv:ExampleID:experience" version="1.0">
+<manifest:Region>
+<md:country>CA</md:country>
+</manifest:Region>
+<manifest:Region>
+<md:country>US</md:country>
+</manifest:Region>
+<manifest:Region>
+<md:country>AU</md:country>
+</manifest:Region>
+<manifest:Region>
+<md:country>NZ</md:country>
+</manifest:Region>
+<manifest:Region>
+<md:country>BR</md:country>
+</manifest:Region>
+<manifest:ContentID>md:cid:org:outtv:ExampleID</manifest:ContentID>
