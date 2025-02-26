@@ -163,11 +163,20 @@ def season_mec():
             except:
                 pass
 
-            #checks for series/season ---------- new
-            #check genres
+            #checks for series/season
+            #check empty genres
             try:
                 if 'av_genre' in filedata:
-                    print(newfilename, ' has bad Genre')
+                    print(newfilename, ' has empty Genre')
+                    genre_input = input('Enter a genre (eg. Comedy, Drama, Reality, Documentary): ')
+                    filedata = filedata.replace(' id="av_genre_" />', f'>{genre_input}</md:Genre>\n<md:Genre>Gay Lesbian</md:Genre>')
+            except:
+                pass
+            
+            # the file may have a genre thats not in the look ups above, so if thats the case
+            try:
+                if 'av_genre' in filedata:
+                    print('***', newfilename, 'still has bad Genre, please change it in heroku or add the current av_genre to the genre look ups above to replace it to a valid Youtube Genre ! ***')
             except:
                 pass
 
@@ -175,6 +184,8 @@ def season_mec():
             try:
                 if '<md:ReleaseYear />' in filedata:
                     print(newfilename, ' has bad Year')
+                    year_input = input('Enter a Year (eg 2024): ')
+                    filedata = filedata.replace('<md:ReleaseYear />', f'<md:ReleaseYear>{year_input}</md:ReleaseYear>')
             except:
                 pass
 
@@ -182,6 +193,8 @@ def season_mec():
             try:
                 if '<mdmec:CompanyDisplayCredit>\n<md:DisplayString language="en" />\n</mdmec:CompanyDisplayCredit>' in filedata:
                     print(newfilename, ' has bad Company Display Credit')
+                    company_input = input('Enter a production company: ')
+                    filedata = filedata.replace('<mdmec:CompanyDisplayCredit>\n<md:DisplayString language="en" />\n</mdmec:CompanyDisplayCredit>', f'<mdmec:CompanyDisplayCredit>\n<md:DisplayString language="en">{company_input}</md:DisplayString>\n</mdmec:CompanyDisplayCredit>')
             except:
                 pass
 
