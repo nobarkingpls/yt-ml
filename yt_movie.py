@@ -3,6 +3,7 @@ import os
 import re
 import shutil
 import xml.etree.ElementTree as ET
+import re
 
 def movie_mec():
 
@@ -174,18 +175,12 @@ def movie_mec():
             #check genres
             try:
                 if 'av_genre' in filedata:
-                    print(appleid, ' has bad Genre')
+                    print(appleid, ' has a bad Genre')
+                    match = re.search(r' id=.av_genre_.*/>', filedata).group(0)
                     genre_input = input('Enter a genre (eg. Comedy, Drama, Reality, Documentary): ')
-                    filedata = filedata.replace(' id="av_genre_" />', f'>{genre_input}</md:Genre>\n<md:Genre>Gay Lesbian</md:Genre>')
-            except:
-                pass
-
-            # the file may have a genre thats not in the look ups above, so if thats the case
-            try:
-                if 'av_genre' in filedata:
-                    print('***', appleid, 'still has bad Genre, please change it in heroku or add the current av_genre to the genre look ups above to replace it to a valid Youtube Genre ! ***')
-            except:
-                pass
+                    filedata = filedata.replace(match, f'>{genre_input}</md:Genre>\n<md:Genre>Gay Lesbian</md:Genre>')
+                    except:
+                        pass
 
             #check empty year
             try:
