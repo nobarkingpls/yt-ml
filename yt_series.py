@@ -205,8 +205,8 @@ def series_mec():
                     match = re.search(r' id=.av_genre_.*/>', filedata).group(0)
                     genre_input = input('Enter a genre (eg. Comedy, Drama, Reality, Documentary): ')
                     filedata = filedata.replace(match, f'>{genre_input}</md:Genre>\n<md:Genre>Gay Lesbian</md:Genre>')
-                    except:
-                        pass
+            except:
+                pass
 
             #check empty year
             try:
