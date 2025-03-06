@@ -21,19 +21,25 @@ def episode_images(amazon_package_path):
 
 				appleid, trash = filename.split('_', 1)
 
-				shutil.move(f'{fullname}', f'{current_directory}/{appleid.replace('_', '')}-banner-3840x2160.png')
+				formatted_apple_id = appleid.replace('_', '')
+
+				shutil.move(f'{fullname}', f'{current_directory}/{formatted_apple_id}-banner-3840x2160.png')
 
 			if 'CA-hero' in filename:
 
 				appleid, trash = filename.split('_', 1)
 
-				shutil.move(f'{fullname}', f'{current_directory}/{appleid.replace('_', '')}-photo-3840x2160.png')
+				formatted_apple_id = appleid.replace('_', '')
+
+				shutil.move(f'{fullname}', f'{current_directory}/{formatted_apple_id}-photo-3840x2160.png')
             
 			if 'CA-1920x1080' in filename:
 
 				appleid, trash = filename.split('-', 1)
 
-				shutil.move(f'{fullname}', f'{current_directory}/{appleid.replace('_', '')}-CA-1920x1080.png')
+				formatted_apple_id = appleid.replace('_', '')
+
+				shutil.move(f'{fullname}', f'{current_directory}/{formatted_apple_id}-CA-1920x1080.png')
             
 		except:
 			pass
