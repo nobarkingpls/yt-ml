@@ -162,7 +162,8 @@ def series_mec():
             except:
                 pass
 
-            filedata = filedata.replace('</md:People>\n</mdmec:Basic>', '</md:People>\n<md:OriginalLanguage>en</md:OriginalLanguage>\n<md:AssociatedOrg organizationID="outtv.com" role="licensor"></md:AssociatedOrg>\n</mdmec:Basic>')
+            # add original language and licensor
+            filedata = filedata.replace('</mdmec:Basic>', '<md:OriginalLanguage>en</md:OriginalLanguage>\n<md:AssociatedOrg organizationID="outtv.com" role="licensor"></md:AssociatedOrg>\n</mdmec:Basic>')
 
             # rating exapnsion to all regions >>
             # ca value G
